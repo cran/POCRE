@@ -2,7 +2,7 @@
 \alias{simdata}
 \docType{data}
 \title{
-A Set of Simulated Data with Single Response Variable
+A Set of Simulated Data with Single Gaussian Response Variable
 }
 \description{
 A simulated data set with 100 observations, each with one response variable and 1,000 covariates.

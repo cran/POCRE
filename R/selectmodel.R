@@ -6,11 +6,9 @@ selectmodel<-function(ppobj, msc=NULL)
     msc <- max(1-0.5*log(n)/log(p-1),0)
   }
 
-  #if(pobj[[1]]$id=="pocre"|pobj[[1]]$id=="fpocre"){
-  if(class(ppobj[[1]])=="pocre"|class(ppobj[[1]])=="fpocre"){
+  if(inherits(ppobj[[1]],"pocre")|inherits(ppobj[[1]],"fpocre")){
     retRes <- selectlinearmodel(ppobj,msc)
-  #} else if(pobj[[1]]$id=="gpocre"){
-  } else if(class(ppobj[[1]])=="gpocre"){
+  } else if(inherits(ppobj[[1]],"gpocre")){
     retRes <- selectglmodel(ppobj,msc)
   } else{
     warning("selectmodel: The model is not supported...")
